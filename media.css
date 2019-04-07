@@ -1,0 +1,60 @@
+@media (max-width: 1024px) {
+    .fullscreen-toggler {
+        position: static;
+        display: none;
+        transform: none;
+        margin: 20px 10px;
+        order: 2;
+    }
+
+    .fullscreen-toggler.active {
+        display: inline-block;
+    }
+
+    .fullscreen-toggler:hover {
+        transform: rotate(180deg);
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav button {
+        position: static;
+        transform: none;
+        margin: 20px 10px;
+        order: 1;
+    }
+}
+
+@media (max-width: 740px) {
+    header {
+        line-height: 1.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 680px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    main {
+        flex-grow: 1;
+        height: auto;
+    }
+
+    footer {
+        position: static;
+    }
+}

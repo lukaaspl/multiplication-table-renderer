@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Render Multiplication Table</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    <div class="fullscreen"></div>
+    <header>
+        <h1>Multiplication Table Renderer</h1>
+    </header>
+    <nav>
+        <div class="input-inline">
+            <label for="rows">Rows:</label>
+            <input type="text" id="rows" maxlength="2" placeholder="e.g. 6">
+        </div>
+        <div class="input-inline">
+            <label for="columns">Columns:</label>
+            <input type="text" id="columns" maxlength="2" placeholder="e.g. 9">
+        </div>
+        <i class="fullscreen-toggler fas fa-expand"></i>
+        <button class="renderBtn">Render</button>
+    </nav>
+    <main></main>
+    <footer><span>generate your first multiplication table</span></footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
