@@ -129,6 +129,7 @@ table td {
     color: rgb(66, 66, 66);
     border: 1px solid rgb(66, 66, 66);
     position: relative;
+    cursor: pointer !important;
 }
 
 table td.picked::after {
