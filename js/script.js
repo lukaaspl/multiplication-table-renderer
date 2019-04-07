@@ -15,7 +15,6 @@ renderBtn.addEventListener("click", function () {
     } else {
         wrongInputValue(rowsInput);
         hasToStop = true;
-        console.log("Invalid rows value!");
     }
 
     if (Number(columnsInput.value)) {
@@ -24,20 +23,16 @@ renderBtn.addEventListener("click", function () {
     } else {
         wrongInputValue(columnsInput);
         hasToStop = true;
-        console.log("Invalid columns value!");
     }
 
     if (!hasToStop) {
         let tableRows = rowsInput.value;
         let tableColumns = columnsInput.value;
         let renderedArray = renderMultiplicationTable(tableRows, tableColumns);
-        let renderedTime = (renderedArray[2]).toFixed(1);
+        let renderedTime = (renderedArray[1]).toFixed(1);
         tableDisplay.innerHTML = "";
         tableDisplay.appendChild(renderedArray[0]);
         footer.innerHTML = `table rendered in <b>${renderedTime}</b> ms`;
-
-        console.log(renderedArray[1]);
-        console.log(renderedArray[2]);
 
         if (tableRows > 10 && tableColumns > 10) {
             fcToggler.classList.add("active");
@@ -81,7 +76,6 @@ function wrongInputValue(input, clear = false) {
 
 function renderMultiplicationTable(rows, columns) {
     let renderedTable = document.createElement("table");
-    let renderedForConsole = "";
     let startRendering = performance.now();
     renderedTable.setAttribute("cellspacing", "4");
 
@@ -123,15 +117,11 @@ function renderMultiplicationTable(rows, columns) {
             }
 
             renderedColumn.innerHTML = i * j;
-
-            renderedForConsole += (i * j) + "\t";
         }
-
-        renderedForConsole += "\n";
     }
 
     let renderingTime = performance.now() - startRendering;
-    return [renderedTable, renderedForConsole, renderingTime];
+    return [renderedTable, renderingTime];
 }
 
 tableDisplay.appendChild(renderMultiplicationTable(10, 10)[0]);
